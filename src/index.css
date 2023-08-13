@@ -18,10 +18,13 @@ body {
 }
 .navbar {
   padding: 30px auto;
+  overflow: hidden;
   /* display: flex;
   align-items: center;
   margin: 0 auto; */
-  background: #111;
+}
+header{
+  background: #111111e1;
 }
 .navbar h2 {
   color: #fff;
@@ -52,9 +55,14 @@ footer{
   font-size: 70px;
   font-weight: bold;
 }
-/* .navbar .links {
-  margin-left: auto;
-} */
+.navbar-button{
+  color: #111;
+  border: 0;
+}
+.navbar-icon{
+  color: red;
+  /* background: red; */
+}
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
@@ -83,7 +91,7 @@ svg {
 }
 svg text {
 	text-transform: uppercase;
-	animation: stroke 5s;
+	animation: stroke 3s;
 	stroke-width: 2;
 	stroke: #365fa0;
 	font-size: 160px;
@@ -106,7 +114,7 @@ svg text {
   text-align: justify;
 }
 .profile {
-  width: 650px;
+  /* width: 650px; */
   animation: float 5s ease-out infinite;
 }
 @keyframes float{
@@ -115,8 +123,18 @@ svg text {
   }
 }
 .hire-me {
+  color: #fd477e;
+  padding: 6px 45px;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #fd477e;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.download-cv {
   color: #f1356d;
-  padding: 6px 30px;
+  padding: 6px 25px;
   font-size: 1em;
   background: transparent;
   border-radius: 50px;
@@ -126,6 +144,10 @@ svg text {
 }
 
 /* Skills */
+.skills-icon{
+  width: 80px;
+  display: inline;
+}
 .skills-item{
   padding: 10px 10px;
   /* margin: 20px; */
@@ -146,6 +168,11 @@ svg text {
   background-color: #57cdc538;
   border-radius: 7px;
   border: 2px solid #57cdc5;
+}
+.work-experience2{
+  background-color: #e5383536;
+  border-radius: 7px;
+  border: 2px solid #e53935;
 }
 .work-exp-logo{
   width: 230px;
@@ -171,13 +198,38 @@ svg text {
   padding: 20px;
 }
 
-@media only screen and (max-width: 980px) {
+/* Services */
+.services-bg{
+  background: #fefefe17;
+}
+.service-icon-hover{
+  background: #fff;
+}
+.services-text{
+  font-size: 13px;
+}
+.services-icon-bg{
+  background: #f1356d;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1004px) {
   .skills-name{
     display: none;
   }
 }
 @media only screen and (max-width: 576px) {
   .logo{
+    text-align: center;
+  }
+}
+@media (max-width: 992px) { 
+  .custom-margin-bottom {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) { 
+  .center-sm-screen {
     text-align: center;
   }
 }

@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Container } from "@chakra-ui/react";
+import {
+  Container,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabIndicator,
+  TabPanel,
+} from "@chakra-ui/react";
 import WorkExperience from "../components/WorkExperience";
 import Footer from "../layouts/Footer";
 
@@ -24,6 +32,9 @@ const Skills = () => {
       opacity: 1,
     },
   };
+
+  let skillsIcon = require("../assets/icons/skills.png");
+  let workIcon = require("../assets/icons/experience-icon.png");
 
   const [skills] = useState([
     {
@@ -52,8 +63,8 @@ const Skills = () => {
     },
     {
       id: 5,
-      img: require("../assets/icons/nodejs.png"),
-      name: "NodeJS",
+      img: require("../assets/icons/php.png"),
+      name: "Php",
       scale: "Intermediate",
     },
     {
@@ -76,53 +87,91 @@ const Skills = () => {
     },
     {
       id: 9,
-      img: require("../assets/icons/quasar.png"),
-      name: "Quasar",
+      img: require("../assets/icons/nodejs.png"),
+      name: "NodeJS",
       scale: "Intermediate",
     },
     {
       id: 10,
-      img: require("../assets/icons/bootstrap.png"),
-      name: "Bootstrap",
-      scale: "Intermediate",
-    }
+      img: require("../assets/icons/python.png"),
+      name: "Python",
+      scale: "Beginner",
+    },
   ]);
 
   return (
     <>
       <Container maxW="container.lg">
-        <motion.div>
-          <h2 className="roboto">
-            Skills <span>&#11835;</span>
-          </h2>
-          <motion.div
-            className="row justify-content-center"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-          >
-            {skills.map((skill) => (
+        <h1 className="roboto center-sm-screen">
+          <img src={skillsIcon} alt="skills-icon" className="skills-icon" />
+          SKILLS
+        </h1>
+        <Tabs position="relative" variant="unstyled">
+          <TabList>
+            <Tab>TechStack</Tab>
+            <Tab>Other Tools</Tab>
+          </TabList>
+          <TabIndicator
+            mt="-1.5px"
+            height="2px"
+            bg="blue.500"
+            borderRadius="1px"
+          />
+          <TabPanels>
+            <TabPanel>
               <motion.div
-                key={skill.id}
-                className="col-4 col-sm-2 m-3 skills-item"
-                align="center"
-                variants={item}
-                whileHover={{ scale: 1.1 }}
+                className="row justify-content-center"
+                variants={container}
+                initial="hidden"
+                animate="visible"
               >
-                <img src={skill.img} alt={skill.name + " logo"} />
-                <span className="skills-name">{skill.name}</span>
+                {skills.map((skill) => (
+                  <motion.div
+                    key={skill.id}
+                    className="col-4 col-sm-2 m-3 skills-item"
+                    align="center"
+                    variants={item}
+                    whileHover={{ scale: 1.1, backgroundColor: "#ffffff31" }}
+                  >
+                    <img src={skill.img} alt={skill.name + " logo"} />
+                    <span className="skills-name">{skill.name}</span>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
-          <h2 className="roboto">
-            <span>&#11835;</span> Work Experience
-          </h2>
+            </TabPanel>
+            <TabPanel>
+              <motion.div
+                className="row justify-content-center"
+                variants={container}
+                initial="hidden"
+                animate="visible"
+              >
+                {skills.map((skill) => (
+                  <motion.div
+                    key={skill.id}
+                    className="col-4 col-sm-2 m-3 skills-item"
+                    align="center"
+                    variants={item}
+                    whileHover={{ scale: 1.1, backgroundColor: "#ffffff31" }}
+                  >
+                    <img src={skill.img} alt={skill.name + " logo"} />
+                    <span className="skills-name">{skill.name}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+        <div className="center-sm-screen mt-3">
+          <h1 className="roboto">
+            WORK EXPERIENCE
+            <img src={workIcon} alt="skills-icon" className="skills-icon" />
+          </h1>
           <br />
           <WorkExperience />
-        </motion.div>
+        </div>
       </Container>
       <Footer />
-
     </>
   );
 };

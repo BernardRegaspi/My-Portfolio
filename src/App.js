@@ -25,8 +25,8 @@ function App() {
     }
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
-  }, []);
+    }, 0);
+  }, [url]);
 
   return (
     <>
@@ -40,7 +40,6 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-
               <Route path="/skills">
                 <Skills />
               </Route>
