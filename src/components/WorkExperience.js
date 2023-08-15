@@ -78,7 +78,7 @@ const WorkExperience = () => {
           </div>
           <div className="p-4">
             <h2 className="roboto">
-              3gx Solutions
+              3GXSolutions
             </h2>
             <p>August 2023 - (On Process)</p>
             <h3 className="roboto">Responsibilities</h3>

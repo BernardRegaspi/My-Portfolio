@@ -48,6 +48,7 @@ footer{
 }
 .code{
   color: #f1356d;
+  font-weight: bold;
 }
 .bernard {
   color: #f1356d;
@@ -70,7 +71,7 @@ footer{
   transition: 0.5s;
   color: #fff;
 }
-.navbar a:hover {
+.nav-item a:hover {
   color: #f1356d;
   text-shadow: 0 0 5px #f1356d, 0 0 5px #f1356d;
 }
@@ -110,11 +111,9 @@ svg text {
 }
 
 .introduction{
-  /* margin-right: 50px; */
   text-align: justify;
 }
 .profile {
-  /* width: 650px; */
   animation: float 5s ease-out infinite;
 }
 @keyframes float{
@@ -213,23 +212,33 @@ svg text {
   border-radius: 10px;
 }
 
+/* about */
+.about-bg{
+  background: #ffffff13;
+  padding: 20px;
+  text-align: justify;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
 @media only screen and (max-width: 1004px) {
   .skills-name{
     display: none;
+  }
+}
+@media only screen and (max-width: 992px) { 
+  .custom-margin-bottom {
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 576px) {
   .logo{
     text-align: center;
   }
-}
-@media (max-width: 992px) { 
-  .custom-margin-bottom {
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 576px) { 
   .center-sm-screen {
     text-align: center;
+  }
+  .services-sm{
+    margin: 20px !important;
   }
 }

@@ -106,7 +106,11 @@ const Home = () => {
             animate="animate"
             transition={{ duration: 0.5, delay: 1.9 }}
           >
-            <img className="profile" src={profile} alt="profile" />
+            <img
+              className="profile"
+              src={profile}
+              alt="profile"
+            />
           </motion.div>
         </motion.div>
       </div>
