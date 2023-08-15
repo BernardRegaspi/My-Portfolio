@@ -17,13 +17,16 @@ const About = () => {
     <>
       <Container maxW="container.lg">
         <motion.div
-          className="text-center justify-content-center mt-3"
+          className="text-center justify-content-center mt-5"
           variants={animation}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5 }}
         >
-          <h1 className="roboto text-start">ABOUT ME</h1>
+          <h1 className="roboto">
+            Hi There!, I am iCan't<span className="code roboto">Code();</span> , Full
+            Stack Developer
+          </h1>
           <motion.div
             className="row about-bg my-5"
             variants={animation}
@@ -72,7 +75,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 1.5 }}
             >
               <img
-                class="about-profile"
+                className="about-profile"
                 src={require("../assets/profile-images/about-profile.jpg")}
                 alt="about-profile"
               />

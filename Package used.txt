@@ -1,6 +1,0 @@
-npm i bootstrap@5.3.1
-npm i react-particles
-npm i tsparticles
-npm i framer-motion
-npm i react-router-dom@5
-npm i react-typed

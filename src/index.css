@@ -46,6 +46,11 @@ footer{
   border-top: 1px solid #fff;
   margin-top: 50px;
 }
+.title{
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+}
 .code{
   color: #f1356d;
   font-weight: bold;
@@ -196,6 +201,29 @@ svg text {
   width: 100px;
   padding: 20px;
 }
+/* Projects */
+.project-bg{
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+.project-img{
+  border-radius: 15px;
+  border: 1px solid #fff;
+}
+.genre{
+  color: #f1356d;
+  font-weight: bold;
+}
+.project-text{
+  font-size: 12px;
+}
+.github-button{
+  display: inline;
+  width: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 
 /* Services */
 .services-bg{
@@ -204,7 +232,7 @@ svg text {
 .service-icon-hover{
   background: #fff;
 }
-.services-text{
+.small-text{
   font-size: 13px;
 }
 .services-icon-bg{

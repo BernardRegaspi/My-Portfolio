@@ -203,7 +203,7 @@ const Skills = () => {
     <>
       <Container maxW="container.lg">
         <motion.div
-          className="mt-3"
+          className="mt-5"
           variants={animation}
           initial="hidden"
           animate="visible"
@@ -245,7 +245,7 @@ const Skills = () => {
                       className="col-4 col-sm-2 m-3 skills-item"
                       align="center"
                       variants={item}
-                      whileHover={{ scale: 1.1, backgroundColor: "#ffffff31" }}
+                      whileHover={{ backgroundColor: "#ffffff31" }}
                     >
                       <img src={skill.img} alt={skill.name + " logo"} />
                       <span className="skills-name">{skill.name}</span>
@@ -266,7 +266,7 @@ const Skills = () => {
                       className="col-4 col-sm-2 m-3 skills-item"
                       align="center"
                       variants={item}
-                      whileHover={{ scale: 1.1, backgroundColor: "#ffffff31" }}
+                      whileHover={{ backgroundColor: "#ffffff31" }}
                     >
                       <img src={otherTool.img} alt={otherTool.name + " logo"} />
                       <span className="skills-name">{otherTool.name}</span>

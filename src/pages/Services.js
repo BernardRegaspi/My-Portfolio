@@ -49,13 +49,13 @@ const Services = () => {
     <>
       <Container maxW="container.lg">
         <motion.div
-          className="text-center justify-content-center mt-3"
+          className="text-center justify-content-center mt-5"
           variants={animation}
           initial="hidden"
           animate="visible"
           transition={{ delay:  0.1}}
         >
-          <h1 className="roboto text-start">MY SERVICES</h1>
+          <h1 className="roboto">MY SERVICES</h1>
           <motion.div
             className="row text-center my-5"
             variants={animation}
@@ -81,7 +81,7 @@ const Services = () => {
                 code
               </motion.span>
               <h4 className="roboto mb-4">Web Development</h4>
-              <p className="services-text">
+              <p className="small-text">
                 I will develop your web-based Capstone/Thesis system, ensuring
                 functionality, user-friendliness, and efficiency in every
                 aspect.
@@ -105,7 +105,7 @@ const Services = () => {
                 photo_library
               </motion.span>
               <h4 className="roboto mb-4">Graphic Designing</h4>
-              <p className="services-text">
+              <p className="small-text">
                 I will skillfully edit your photos, logos, brochures,
                 tarpaulins, and more, ensuring a polished and professional
                 visual identity for your projects.
@@ -129,7 +129,7 @@ const Services = () => {
                 videocam
               </motion.span>
               <h4 className="roboto mb-4">Video Editing</h4>
-              <p className="services-text">
+              <p className="small-text">
                 I will adeptly edit your videos, customizing each one to fit its
                 designated category, guaranteeing a professional and engaging
                 end result.

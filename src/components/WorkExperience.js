@@ -2,7 +2,6 @@ import { Container } from "@chakra-ui/react";
 import { useState } from "react";
 
 const WorkExperience = () => {
-
   const [tools] = useState([
     require("../assets/icons/gitlab.png"),
     require("../assets/icons/quasar.png"),
@@ -21,19 +20,17 @@ const WorkExperience = () => {
       <Container maxW="container.lg">
         <div className="d-md-flex work-experience">
           <div className="p-4" align="center">
-            <img
-              className="work-exp-logo"
-              src={tools[4]}
-              alt="pixel8_logo"
-            />
+            <img className="work-exp-logo" src={tools[4]} alt="pixel8_logo" />
           </div>
           <div className="p-4">
-            <h2 className="roboto">
+            <h5 className="roboto">
               Pixel 8 Web Solution and Consultancy Inc.
-            </h2>
-            <p>March 2023 - June 2023 (486 Hours Internship)</p>
-            <h3 className="roboto">Responsibilities</h3>
-            <ul className="responsibilities">
+            </h5>
+            <p className="small-text">
+              March 2023 - June 2023 (486 Hours Internship)
+            </p>
+            <h5 className="roboto">Responsibilities</h5>
+            <ul className="small-text responsibilities">
               <li>
                 Engage in full-time remote work from Monday to Saturday,
                 spanning 8:00 AM to 5:00 PM
@@ -67,29 +64,23 @@ const WorkExperience = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="d-md-flex work-experience2 mt-5">
           <div className="p-4" align="center">
-            <img
-              className="work-exp-logo"
-              src={tools[5]}
-              alt="pixel8_logo"
-            />
+            <img className="work-exp-logo" src={tools[5]} alt="pixel8_logo" />
           </div>
           <div className="p-4">
-            <h2 className="roboto">
-              3GXSolutions
-            </h2>
-            <p>August 2023 - (On Process)</p>
-            <h3 className="roboto">Responsibilities</h3>
-            <ul className="responsibilities">
+            <h5 className="roboto">3GXSolutions</h5>
+            <p className="small-text">August 2023 - (On Process)</p>
+            <h5 className="roboto">Responsibilities</h5>
+            <ul className="small-text responsibilities">
               <li>
-                Engage in full-time remote work from Monday to Saturday,
-                spanning 8:00 AM to 5:00 PM
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                inventore ex voluptatem ratione unde?
               </li>
               <li>
-                Master programming languages and frameworks as directed by the
-                supervisor.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                inventore ex voluptatem ratione unde? 
               </li>
             </ul>
           </div>
@@ -97,7 +88,7 @@ const WorkExperience = () => {
             <p className="position">Backend Developer</p>
             <p align="left">Tools:</p>
             <div className="tools">
-            <img src={tools[8]} alt="github" />
+              <img src={tools[8]} alt="github" />
               <img src={tools[6]} alt="laravel" />
               <img src={tools[7]} alt="react" />
               <img src={tools[9]} alt="mongodb" />

@@ -1,134 +1,109 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Container } from "@chakra-ui/react";
 import Footer from "../layouts/Footer";
 
 const Project = () => {
-    const [bg1, setBg1] = useState("#f1356d");
-    const [icon1, setIcon1] = useState("#fff");
-    const [bg2, setBg2] = useState("#f1356d");
-    const [icon2, setIcon2] = useState("#fff");
-    const [bg3, setBg3] = useState("#f1356d");
-    const [icon3, setIcon3] = useState("#fff");
-  
-    const handleHover1 = () => {
-      setBg1("#fff");
-      setIcon1("#f1356d");
-    };
-  
-    const handleHoverEnd1 = () => {
-      setBg1("#f1356d");
-      setIcon1("#fff");
-    };
-    const handleHover2 = () => {
-      setBg2("#fff");
-      setIcon2("#f1356d");
-    };
-  
-    const handleHoverEnd2 = () => {
-      setBg2("#f1356d");
-      setIcon2("#fff");
-    };
-    const handleHover3 = () => {
-      setBg3("#fff");
-      setIcon3("#f1356d");
-    };
-  
-    const handleHoverEnd3 = () => {
-      setBg3("#f1356d");
-      setIcon3("#fff");
-    };
-  
-    const animation = {
-      hidden: { y: 30, opacity: 0 },
-      visible: { y: 0, opacity: 1 },
-      transition: { duration: 0.5 },
-    };
+  const [projects] = useState([
+    {
+      id: 1,
+      path: require("../assets/projects/personal-project.PNG"),
+      title: "My Website Portfolio",
+      genre: "Personal Project",
+      link: "http://localhost:3000",
+      source_code: "https://github.com/BernardRegaspi/My-Portfolio",
+      details: "lorem ipsum",
+    },
+    {
+      id: 2,
+      path: require("../assets/projects/appointment-system.PNG"),
+      title: "Appointment System",
+      genre: "Capstone Project",
+      link: "https://maob-appointments-bato.000webhostapp.com/",
+      source_code: "https://github.com/BernardRegaspi/My-Portfolio",
+      details: "lorem ipsum",
+    },
+    {
+      id: 3,
+      path: require("../assets/projects/personal-project.PNG"),
+      title: "Personal Website Portfolio",
+      genre: "Personal Project",
+      link: "http://localhost:3000",
+      source_code: "https://github.com/BernardRegaspi/My-Portfolio",
+      details: "lorem ipsum",
+    },
+  ]);
+  const animation = {
+    hidden: { y: 30, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
   return (
     <>
       <Container maxW="container.lg">
-        <div className="text-center justify-content-center mt-3">
-          <h1 className="roboto text-start">MY PROJECTS</h1>
-          <motion.div
-            className="row text-center my-5"
-            variants={animation}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.div
-              className="col m-2 m-4-sm p-5 services-bg services-sm"
-              align="center"
-              onHoverStart={handleHover1}
-              onHoverEnd={handleHoverEnd1}
-              whileHover={{
-                y: -20,
-                backgroundColor: "#f1356d",
-              }}
-            >
-              <motion.span
-                className="material-icons p-3 services-icon-bg mb-2 fs-2"
-                initial={{ backgroundColor: "#f1356d", color: "#fff" }}
-                animate={{ backgroundColor: bg1, color: icon1 }}
+        <motion.div
+          className="mt-5"
+          variants={animation}
+          initial="hidden"
+          animate="visible"
+        >
+          <h1 className="roboto text-center">
+            My Newest and Most Impressive Website Build
+          </h1>
+          <div className="my-5">
+            {projects.map((project) => (
+              <motion.div
+                className="row project-bg my-4"
+                key={project.id}
+                whileHover={{
+                  y: -5,
+                  backgroundColor: "#ffffff18",
+                }}
               >
-                code
-              </motion.span>
-              <h4 className="roboto mb-4">Web Development</h4>
-              <p className="services-text">
-                I will develop your web-based Capstone/Thesis system, ensuring
-                functionality, user-friendliness, and efficiency in every
-                aspect.
-              </p>
-            </motion.div>
-            <motion.div
-              className="col m-2 p-5 services-bg services-sm"
-              align="center"
-              onHoverStart={handleHover2}
-              onHoverEnd={handleHoverEnd2}
-              whileHover={{
-                y: -20,
-                backgroundColor: "#f1356d",
-              }}
-            >
-              <motion.span
-                className="material-icons p-3 services-icon-bg mb-2 fs-2"
-                initial={{ backgroundColor: "#f1356d", color: "#fff" }}
-                animate={{ backgroundColor: bg2, color: icon2 }}
-              >
-                photo_library
-              </motion.span>
-              <h4 className="roboto mb-4">Graphic Designing</h4>
-              <p className="services-text">
-                I will skillfully edit your photos, logos, brochures,
-                tarpaulins, and more, ensuring a polished and professional
-                visual identity for your projects.
-              </p>
-            </motion.div>
-            <motion.div
-              className="col m-2 p-5 services-bg services-sm"
-              align="center"
-              onHoverStart={handleHover3}
-              onHoverEnd={handleHoverEnd3}
-              whileHover={{
-                y: -20,
-                backgroundColor: "#f1356d",
-              }}
-            >
-              <motion.span
-                className="material-icons p-3 services-icon-bg mb-2 fs-2"
-                initial={{ backgroundColor: "#f1356d", color: "#fff" }}
-                animate={{ backgroundColor: bg3, color: icon3 }}
-              >
-                videocam
-              </motion.span>
-              <h4 className="roboto mb-4">Video Editing</h4>
-              <p className="services-text">
-                I will adeptly edit your videos, customizing each one to fit its
-                designated category, guaranteeing a professional and engaging
-                end result.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
+                <div className="col">
+                  <img
+                    className="project-img"
+                    src={project.path}
+                    alt={project.title}
+                  />
+                </div>
+                <div className="col">
+                  <h5 className="genre roboto">{project.genre}</h5>
+                  <h3 className="roboto">{project.title}</h3>
+                  <p className="project-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio quo, corrupti delectus earum id veritatis placeat
+                    eaque dolorum aspernatur quaerat quasi harum doloremque ipsa
+                    tempore, repellat perspiciatis quos excepturi minus?
+                  </p>
+                  <div className="mt-4">
+                    <img
+                      className="github-button"
+                      src={require("../assets/icons/github.png")}
+                      onClick={() => {
+                        window.open(project.source_code, "_blank");
+                      }}
+                      alt="github-button"
+                    />
+                    <motion.button
+                      onClick={() => {
+                        window.open(project.link, "_blank");
+                      }}
+                      className="download-cv"
+                      whileHover={{
+                        scale: 1.1,
+                        textShadow: "0 0 2px #f1356d, 0 0 5px #f1356d",
+                        boxShadow:
+                          "0 2px 5px 0 #f1356d inset, 0 2px 5px 0 #f1356d, 0 2px 5px 0 #f1356d inset, 0 2px 5px 0 #f1356d",
+                      }}
+                    >
+                      Visit Project
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </Container>
       <Footer />
     </>
